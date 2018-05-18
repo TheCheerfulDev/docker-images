@@ -1,2 +1,3 @@
 */3 * * * * curator --config /config/config_file.yml /config/action_file.yml
+# DO NOT REMOVE THIS JOB IF YOU WANT LOSE THE ABILITY TO RELOAD CRONJOBS
 * * * * * /usr/bin/crontab /config/crontab.txt
