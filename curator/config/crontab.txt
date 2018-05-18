@@ -1,0 +1,2 @@
+*/3 * * * * curator --config /config/config_file.yml /config/action_file.yml
+* * * * * /usr/bin/crontab /config/crontab.txt
