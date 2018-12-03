@@ -1,6 +1,6 @@
 # Elasticsearch 6.5.1
 
-This docker images contains elasticsearch 6.5.1 with the trial license and xpack security enabled. 
+This docker images contains elasticsearch 6.5.1 with the trial license and X-pack security enabled. 
 
 ## Building the image
 
@@ -16,13 +16,13 @@ Or run build.sh script.
 To run the image in interactive mode, use the following command:
 
 ```console
-docker run -it --name myserver -p 9200:9200 -p 9300:9300 rovingeye/elasticsearch:latest
+docker run -it --name my-elasticsearch -p 9200:9200 -p 9300:9300 rovingeye/elasticsearch:latest
 ```
 
 To run the image in detached mode, use the following command:
 
 ```console
-docker run -d --name myserver -p 9200:9200 -p 9300:9300 rovingeye/elasticsearch:latest
+docker run -d --name my-elasticsearch -p 9200:9200 -p 9300:9300 rovingeye/elasticsearch:latest
 ```
 
 ## Passwords
