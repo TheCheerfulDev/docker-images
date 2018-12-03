@@ -3,7 +3,7 @@ version: '3'
 services:
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.4
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.5.1
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
     ports:
@@ -17,7 +17,7 @@ services:
   logstash:
     build:
       context: logstash/
-    image: rovingeye/logstash:6.2.4
+    image: rovingeye/logstash:6.5.1
     volumes:
       - ./logstash/config/:/usr/share/logstash/config/:ro
       - ./logstash/pipeline/:/usr/share/logstash/pipeline/:ro
@@ -33,7 +33,7 @@ services:
       - elasticsearch
 
   kibana:
-    image: docker.elastic.co/kibana/kibana-oss:6.2.4
+    image: docker.elastic.co/kibana/kibana-oss:6.5.1
     volumes:
       - ./kibana/config/:/usr/share/kibana/config:ro
     ports:

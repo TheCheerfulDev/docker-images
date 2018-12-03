@@ -13,10 +13,10 @@ actions:
     filters:
     - filtertype: pattern
       kind: regex
-      value: '^.+_'
+      value: '^.+-'
     - filtertype: age
       source: name
       direction: older
-      timestring: '%d-%m-%Y'
+      timestring: '%Y.%m.%d'
       unit: days
       unit_count: 1

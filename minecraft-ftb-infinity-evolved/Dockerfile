@@ -1,9 +1,8 @@
-FROM ubuntu:18.04
+FROM openjdk:8
 
 WORKDIR /ftb_server
 
 RUN apt-get update \
- && apt-get install -qq wget unzip openjdk-8-jdk \
  && wget -q -O server.zip https://www.feed-the-beast.com/projects/ftb-infinity-evolved/files/2484486/download \
  && unzip -q server.zip \
  && rm server.zip \
