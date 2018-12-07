@@ -36,3 +36,41 @@ To check the server status, use the following command:
 ```console
 curl -X GET "elastic:secret@localhost:9200/_cat/health"
 ```
+
+## Example docker-compose
+
+```yaml
+version: '3'
+services:
+  elasticsearch:
+    build:
+      context: ./activated_elasticsearch
+    image: rovingeye/activated-elasticsearch:6.5.1
+    container_name: cluster-elasticsearch
+    environment:
+      - node.name=elasticnode1
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=true
+      - xpack.monitoring.collection.enabled=true
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    networks:
+      - esnet
+        
+        
+volumes:
+  esdata1:
+    driver: local
+  
+networks:
+  esnet:
+```
