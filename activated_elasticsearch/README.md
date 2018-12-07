@@ -7,7 +7,7 @@ This docker images contains elasticsearch 6.5.1 with the trial license and X-pac
 To build the image, use the following command:
 
 ```console
-docker build -t rovingeye/elasticsearch:latest .
+docker build -t thecheerfuldev/elasticsearch:latest .
 ```
 
 Or run build.sh script.
@@ -16,13 +16,13 @@ Or run build.sh script.
 To run the image in interactive mode, use the following command:
 
 ```console
-docker run -it --name my-elasticsearch -p 9200:9200 -p 9300:9300 rovingeye/elasticsearch:latest
+docker run -it --name my-elasticsearch -p 9200:9200 -p 9300:9300 thecheerfuldev/elasticsearch:latest
 ```
 
 To run the image in detached mode, use the following command:
 
 ```console
-docker run -d --name my-elasticsearch -p 9200:9200 -p 9300:9300 rovingeye/elasticsearch:latest
+docker run -d --name my-elasticsearch -p 9200:9200 -p 9300:9300 thecheerfuldev/elasticsearch:latest
 ```
 
 ## Passwords
