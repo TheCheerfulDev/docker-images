@@ -45,7 +45,7 @@ services:
   elasticsearch:
     build:
       context: ./activated_elasticsearch
-    image: rovingeye/activated-elasticsearch:6.5.1
+    image: thecheerfuldev/activated-elasticsearch:6.5.1
     container_name: cluster-elasticsearch
     environment:
       - node.name=elasticnode1
@@ -65,7 +65,6 @@ services:
       - "9300:9300"
     networks:
       - esnet
-        
         
 volumes:
   esdata1:
