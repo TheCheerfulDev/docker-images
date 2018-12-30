@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:6.5.1
+FROM docker.elastic.co/elasticsearch/elasticsearch:6.5.4
 
 COPY ./scripts/set_passwords.sh /scripts/set_passwords.sh
 RUN yum -y -q install expect
