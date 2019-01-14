@@ -1,6 +1,6 @@
 # Elasticsearch 6.5.4
 
-This docker images contains elasticsearch 6.5.1 with the trial license and X-pack security enabled. 
+This docker images contains elasticsearch 6.5.4 with the trial license and X-pack security enabled. 
 
 ## Building the image
 
