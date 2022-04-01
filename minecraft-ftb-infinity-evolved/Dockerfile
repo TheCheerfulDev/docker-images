@@ -1,9 +1,11 @@
-FROM openjdk:8
+FROM eclipse-temurin:8-jre
 
 WORKDIR /ftb_server
 
 RUN apt-get update \
- && wget -q -O server.zip https://www.feed-the-beast.com/projects/ftb-infinity-evolved/files/2484486/download \
+ && apt-get install wget -y \
+ && apt-get install unzip -y \
+ && wget -q -O server.zip https://edge.forgecdn.net/files/2731/545/FTBInfinityServer_3.1.0.zip \
  && unzip -q server.zip \
  && rm server.zip \
  && sed -i 's/false/true/g' eula.txt \
